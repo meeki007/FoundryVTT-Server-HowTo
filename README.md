@@ -43,7 +43,7 @@ If all you are going to use this server for is FoundryVTT you will only need 1gb
 MORE! ram and cpu if you plan on running video chat and voice across multiple players. You can always upgrade/pay for more as needed
 <br>
 <br>
-This Guide is <b>not</b> for individuals who fear the CLI (command line interface). If you have issues your going to need to read and search. You can always open an issue here https://github.com/meeki007/FoundryVTT-Server-HowTo/issuesand if i have time I can try to help.
+This Guide is <b>not</b> for individuals who fear the CLI (command line interface). If you have issues your going to need to read and search. You can always open an issue here https://github.com/meeki007/FoundryVTT-Server-HowTo/issues and if i have time I can try to help.
 <br>
 
 ## Setup_Server
