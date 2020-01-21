@@ -676,7 +676,7 @@ Now The foundryvtt setup page should load.
 
 Using any method you choose it would be wise to copy the entire folder located at /home/YourChosenNameHere/foundryvtt_server/foundrydata/
 
-If you make a mistake and the server starts to spit error msg's at you deleting the Contents of the data inside the /foundrydata folder will give you a fresh start.
+If you make a mistake and the server starts to spit error msg's at you, deleting the Contents of the data inside the /foundrydata folder will give you a fresh start.
 
 To do this stop the foundryvtt server, first get the status of pm2
 
