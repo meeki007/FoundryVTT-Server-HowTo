@@ -655,7 +655,7 @@ location /setup {
 
 
 		auth_basic           "Private Area";
-		auth_basic_user_file /home/meeki/docker/foundryvtt/htpasswd/.htpasswd;
+		auth_basic_user_file $HOME/foundryvtt_server/htpasswd/.htpasswd;
 }
 ```
 
