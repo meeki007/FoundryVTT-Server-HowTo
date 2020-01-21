@@ -277,7 +277,7 @@ Start foundryvtt with pm2
 
 In terminal:
 ```
-$ pm2 start $HOME/foundryvtt_server/foundryvtt/resources/app/main.js -- --port=30000 --dataPath=/$HOME/foundryvtt_server/foundryvtt/foundrydata
+$ pm2 start $HOME/foundryvtt_server/foundryvtt/resources/app/main.js -- --port=30000 --dataPath=/$HOME/foundryvtt_server/foundrydata
 ```
 <br>
 <br>
@@ -709,7 +709,7 @@ Now we can remove the files
 
 In terminal:
 ```
-$ sudo rm -rfv $HOME/foundryvtt_server/foundrydata/
+$ sudo rm -rfv /$HOME/foundryvtt_server/foundrydata/
 ```
 
 It would be best if you had a backup of the folder so you can start from the last backup by copying the files to the /foundrydata directory after removing all the files.
