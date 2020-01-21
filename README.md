@@ -613,12 +613,12 @@ To the subdomain.domain.com that you own
 ```
 sudo nano /etc/nginx/sites-available/foundryvtt.your_domain_name.com
 ```
-Add this to the server block file. place the whole thing just above the last } bracket at the bottom of the file.
+Add this to the server block file. place the whole thing just under the block for "location / { }" and above the certbot stuff.
 
 <b>You must change the name to your user name for the directory /home/YourChosenNameHere/foundryvtt_server/htpasswd/.htpasswd at the bottom of this to the correct path. </b>
 ```
 location /setup {
-	proxy_pass http://127.0.0.1:3000;
+	proxy_pass http://127.0.0.1:30000;
 
 		#Defines the HTTP protocol version for proxying
 		#by default it it set to 1.0.
