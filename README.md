@@ -430,7 +430,7 @@ server {
     		return 200 "User-agent: *\nDisallow: /\n";
     	}
     	location / {
-       		proxy_pass http://127.0.0.1:1880;
+       		proxy_pass http://127.0.0.1:30000;
 
 		#Defines the HTTP protocol version for proxying
 		#by default it it set to 1.0.
