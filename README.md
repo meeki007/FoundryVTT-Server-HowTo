@@ -254,7 +254,7 @@ You may have to install unzip if its not installed on your server with: $ sudo a
 <br>
 In terminal:
 ```
-$ unzip foundryvtt.zip -d /opt $HOME/foundryvtt_server/foundryvtt
+$ unzip foundryvtt.zip -d /$HOME/foundryvtt_server/foundryvtt/
 ```
 <br>
 <br>
