@@ -658,6 +658,18 @@ location /setup {
 		auth_basic_user_file $HOME/foundryvtt_server/htpasswd/.htpasswd;
 }
 ```
+Next, test to make sure that there are no syntax errors in any of your Nginx files:
+
+In terminal:
+```
+$ sudo nginx -t
+```
+Restart Nginx to enable your changes:
+
+In terminal:
+```
+$ sudo systemctl restart nginx
+```
 
 Test that user name and password are working
 
