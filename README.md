@@ -614,6 +614,8 @@ To the subdomain.domain.com that you own
 sudo nano /etc/nginx/sites-available/foundryvtt.your_domain_name.com
 ```
 Add this to the server block file. place the whole thing just above the last } bracket at the bottom of the file.
+
+<b>You must change the name to your user name for the directory /home/YourChosenNameHere/foundryvtt_server/htpasswd/.htpasswd at the bottom of this to the correct path. </b>
 ```
 location /setup {
 	proxy_pass http://127.0.0.1:3000;
@@ -655,7 +657,7 @@ location /setup {
 
 
 		auth_basic           "Private Area";
-		auth_basic_user_file $HOME/foundryvtt_server/htpasswd/.htpasswd;
+		auth_basic_user_file /home/YourChosenNameHere/foundryvtt_server/htpasswd/.htpasswd;
 }
 ```
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
