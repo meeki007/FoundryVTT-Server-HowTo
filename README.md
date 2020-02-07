@@ -2,7 +2,7 @@
 ## Ubuntu 18.04 - nigix - https - ssl - basic auth - security
 
 ### Contributors
-LogosWorks - Upaded this howto - Fix for 1MB Upload limit in the Nginx Config file [https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1](https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1)
+LogosWorks - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1](https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1)
 
 ## Table of Contents
 * [Introduction](#Introduction)
