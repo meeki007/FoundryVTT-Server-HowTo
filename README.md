@@ -504,9 +504,7 @@ http {
     ...ignore stuff here...
 }```
 
-By default the limit is 1
-}
-```
+
 
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
 
