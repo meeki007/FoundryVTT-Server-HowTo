@@ -1,6 +1,9 @@
 # FoundryVTT
 ## Ubuntu 18.04 - nigix - https - ssl - basic auth - security
 
+## Contributors
+LogosWorks - Fix for 1MB Upload limit in the Nginx Config file [https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1](https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1)
+
 ## Table of Contents
 * [Introduction](#Introduction)
 * [Setup_Server](#Setup_Server)
@@ -484,19 +487,24 @@ $ sudo ln -s /etc/nginx/sites-available/foundryvtt.your_domain_name.com /etc/ngi
 ```
 
 
-To avoid a possible hash bucket memory problem that can arise from adding additional server names, it is necessary to adjust a single value in the /etc/nginx/nginx.conf file. Open the file:
+To avoid a possible hash bucket memory problem that can arise from adding additional server names, and to Sets the maximum allowed size of the client request body, specified in the “Content-Length” request header field. It is necessary to adjust values in the /etc/nginx/nginx.conf file. Open the file:
 
 In terminal:
 ```
 $ sudo nano /etc/nginx/nginx.conf
 ```
-Now uncomment (remove the # symbol) from the http section line <b>server_names_hash_bucket_size 64;</b> so it looks like this:
+Now uncomment (remove the # symbol) from the http section line <b>server_names_hash_bucket_size 64;</b> and change the <b>client_max_body_size 100M</b> so it looks like this:
 
 ```
 http {
     ...ignore stuff here...
     server_names_hash_bucket_size 64;
     ...ignore stuff here...
+    client_max_body_size 100M;
+    ...ignore stuff here...
+}```
+
+By default the limit is 1
 }
 ```
 
