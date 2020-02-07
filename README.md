@@ -504,6 +504,7 @@ http {
     ...ignore stuff here...
 }
 ```
+NOTE: if you need to upload files/images larger than 100M to the server please increase this value for your needs.  
 
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
 
