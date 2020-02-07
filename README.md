@@ -502,9 +502,8 @@ http {
     ...ignore stuff here...
     client_max_body_size 100M;
     ...ignore stuff here...
-}```
-
-
+}
+```
 
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
 
