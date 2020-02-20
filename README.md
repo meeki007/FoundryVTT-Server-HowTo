@@ -813,7 +813,7 @@ Notice how it sent us to https://foundryvtt.your_domain_name.com/join and <b>not
 <br>
 Also notice how they can not select Gamemaster as you are currently logged into it on another incognito screen/device
 <br>
-###### Close this incognito window or other device now
+#### Close this incognito window or other device now
 
 ![08-playerselect.png](./img/08-playerselect.png)
 
