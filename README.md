@@ -819,7 +819,7 @@ Also notice how they can not select Gamemaster as you are currently logged into 
 
 <br>
 
-Back on the first window we started all this on lets click, Return to Setup.
+Back on the first window/device we started all this on (not a incognito window, you should have closed that) lets click, Return to Setup.
 
 ![09-returntosetup.png](./img/09-returntosetup.png)
 
@@ -828,7 +828,7 @@ Back on the first window we started all this on lets click, Return to Setup.
 The Game Server is no longer running now that we are back in /setup
 <b>
 Also if a user or in a incognito tab you try to goto https://foundryvtt.your_domain_name.com you will be sent to https://foundryvtt.your_domain_name.com/setup and prompted for the password you setup for user auth.
-<b>
+<br>
 What you should take away from all of this:
 <br>
 A Launched Game/World = users sent to https://foundryvtt.your_domain_name.com/anything_else_here and the basic auth password prompt is not presented.
