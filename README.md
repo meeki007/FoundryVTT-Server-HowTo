@@ -764,7 +764,7 @@ Now create a world. This guide is not for explaining that. Please see: https://g
 
 Launch your world
 
-![04aa-lauchworld.png](./04aa-lauchworld.png)
+![04aa-lauchworld.png](./img/04aa-lauchworld.png)
 
 <br>
 
