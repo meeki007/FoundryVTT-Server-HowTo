@@ -790,7 +790,7 @@ Now would be a good time to create a password for the Gamemaster. However you do
 <br>
 Add some users too while your there. you really don't need passwords for them at this time.
 <br>
-###### Don't forget to click on, Launch Game Session, when you are done.
+#### Don't forget to click on, Launch Game Session, when you are done.
 <br>
 
 ![05-manageplayers.png](./img/05-manageplayers.png)
