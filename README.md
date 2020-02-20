@@ -837,7 +837,7 @@ What you should take away from all of this:
 A Launched Game/World = users sent to https://foundryvtt.your_domain_name.com/anything_else_here and the basic auth password prompt is not presented.
 <br>
 <br>
-When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https://foundryvtt.your_domain_name.com/setup and are asked for a password before they can view the game.
+When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https://foundryvtt.your_domain_name.com/setup and are asked for a password before they can enter the server.
 <br>
 <br>
 <br>
