@@ -827,11 +827,14 @@ Back on the first window/device we started all this on (not a incognito window, 
 
 The Game Server is no longer running now that we are back in /setup
 <br>
+<br>
 Also if a user or in a incognito tab you try to goto https://foundryvtt.your_domain_name.com you will be sent to https://foundryvtt.your_domain_name.com/setup and prompted for the password you setup for user auth.
 <br>
 What you should take away from all of this:
 <br>
+<br>
 A Launched Game/World = users sent to https://foundryvtt.your_domain_name.com/anything_else_here and the basic auth password prompt is not presented.
+<br>
 <br>
 When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https://foundryvtt.your_domain_name.com/setup and are asked for a password before they can view the game.
 <br>
