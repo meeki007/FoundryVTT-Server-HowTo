@@ -25,6 +25,8 @@ LogosWorks - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [h
     * [HTTPS_SSL_certbot](#HTTPS_SSL_certbot)
     * [Securing_Setup_Page](#Securing_Setup_Page)
 * [Backup_Recovery](#Backup_Recovery)
+* [First_use_and_how_users_login](#First_use_and_how_users_login)
+
 
 
 
@@ -437,7 +439,7 @@ server {
 
 		#Defines the HTTP protocol version for proxying
 		#by default it it set to 1.0.
-		#For Websockets and keepalive connections you need to use the version 1.1    
+		#For Websockets and keepalive connections you need to use the version 1.1
 		proxy_http_version  1.1;
 
 		#Sets conditions under which the response will not be taken from a cache.
@@ -446,27 +448,27 @@ server {
 		#These header fields are required if your application is using Websockets
 		proxy_set_header Upgrade $http_upgrade;
 
-		#These header fields are required if your application is using Websockets    
+		#These header fields are required if your application is using Websockets
 		proxy_set_header Connection "upgrade";
 
 		#The $host variable in the following order of precedence contains:
 		#hostname from the request line, or hostname from the Host request header field
-		#or the server name matching a request.    
+		#or the server name matching a request.
 		proxy_set_header Host $host;
 
 		#Forwards the real visitor remote IP address to the proxied server
 		proxy_set_header X-Real-IP $remote_addr;
 
-		#A list containing the IP addresses of every server the client has been proxied through    
+		#A list containing the IP addresses of every server the client has been proxied through
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-		#When used inside an HTTPS server block, each HTTP response from the proxied server is rewritten to HTTPS.    
+		#When used inside an HTTPS server block, each HTTP response from the proxied server is rewritten to HTTPS.
 		proxy_set_header X-Forwarded-Proto $scheme;
 
-		#Defines the original host requested by the client.    
+		#Defines the original host requested by the client.
 		proxy_set_header X-Forwarded-Host $host;
 
-		#Defines the original port requested by the client.    
+		#Defines the original port requested by the client.
 		proxy_set_header X-Forwarded-Port $server_port;
 
     	}
@@ -504,7 +506,7 @@ http {
     ...ignore stuff here...
 }
 ```
-NOTE: if you need to upload files/images larger than 100M to the server please increase this value for your needs.  
+NOTE: if you need to upload files/images larger than 100M to the server please increase this value for your needs.
 
 Next, test to make sure that there are no syntax errors in any of your Nginx files:
 
@@ -628,7 +630,7 @@ location /setup {
 
 		#Defines the HTTP protocol version for proxying
 		#by default it it set to 1.0.
-		#For Websockets and keepalive connections you need to use the version 1.1    
+		#For Websockets and keepalive connections you need to use the version 1.1
 		proxy_http_version  1.1;
 
 		#Sets conditions under which the response will not be taken from a cache.
@@ -637,27 +639,27 @@ location /setup {
 		#These header fields are required if your application is using Websockets
 		proxy_set_header Upgrade $http_upgrade;
 
-		#These header fields are required if your application is using Websockets    
+		#These header fields are required if your application is using Websockets
 		proxy_set_header Connection "upgrade";
 
 		#The $host variable in the following order of precedence contains:
 		#hostname from the request line, or hostname from the Host request header field
-		#or the server name matching a request.    
+		#or the server name matching a request.
 		proxy_set_header Host $host;
 
 		#Forwards the real visitor remote IP address to the proxied server
 		proxy_set_header X-Real-IP $remote_addr;
 
-		#A list containing the IP addresses of every server the client has been proxied through    
+		#A list containing the IP addresses of every server the client has been proxied through
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-		#When used inside an HTTPS server block, each HTTP response from the proxied server is rewritten to HTTPS.    
+		#When used inside an HTTPS server block, each HTTP response from the proxied server is rewritten to HTTPS.
 		proxy_set_header X-Forwarded-Proto $scheme;
 
-		#Defines the original host requested by the client.    
+		#Defines the original host requested by the client.
 		proxy_set_header X-Forwarded-Host $host;
 
-		#Defines the original port requested by the client.    
+		#Defines the original port requested by the client.
 		proxy_set_header X-Forwarded-Port $server_port;
 
 
@@ -730,4 +732,111 @@ $ pm2 start main
 If you now login to the server https://foundryvtt.your_domain_name.com you will find it reset to stock or backup if you moved the files.
 
 
+## First_use_and_how_users_login
+
+Only the /setup area of the server is protected by basic auth(the password prompt)
+
+So whe a user(you or a player) goes to https://foundryvtt.your_domain_name.com , and no game is running, FoundryVTT redirects the user to https://foundryvtt.your_domain_name.com/setup .
+
+If a game is setup and currently running FoundryVTT when the user goes to https://foundryvtt.your_domain_name.com FoundryVTT redirects them to https://foundryvtt.your_domain_name.com/join and no basic auth password prompt will happen/be shown.
+
+Lets walk through this!
+
+As the GameMaster I goto https://foundryvtt.your_domain_name.com and I see this.
+
+![01-first_login.png](./img/01-first_login.png)
+
+<br>
+
+I enter my user name and password I created and I see this.
+<br>
+Notice the pink arrow and how we are redirected to /setup
+
+![02-whereittakesyou.png](./img/02-whereittakesyou.png)
+
+<br>
+
+Now create a world. This guide is not for explaining that. Please see: https://github.com/foundry-vtt-community/wiki/wiki/Setting-up-Worlds
+
+![03-createworld.png](./img/03-createworld.png)
+
+<br>
+
+Launch your world
+
+![04aa-lauchworld.png](./04aa-lauchworld.png)
+
+<br>
+
+Next you should see this page.
+<br>
+Notice the pink arrow and how we are redirected to /join
+<br>
+Goahead and select Gamemaster. Accesskey is left blank as we have not set one up yet.
+<br>
+Click on, Join Game Session
+
+![04a-jointab.png](./img/04a-jointab.png)
+
+<br>
+
+You are now logged in as Gamemaster. Click on Configure Players
+
+![04b-configplayers.png](./img/04b-configplayers.png)
+
+<br>
+
+Now would be a good time to create a password for the Gamemaster. However you don't have to. As long as you are logged in as the Gamemaster no one else can take your spot.
+<br>
+Add some users too while your there. you really don't need passwords for them at this time.
+<br>
+###### Don't forget to click on, Launch Game Session, when you are done.
+<br>
+
+![05-manageplayers.png](./img/05-manageplayers.png)
+
+<br>
+
+Testing that players are sent to the /join area of the server.
+<br>
+As long as the game session is running any user that goes to https://foundryvtt.your_domain_name.com will be redirected to https://foundryvtt.your_domain_name.com/join
+<br>
+Open a incognito page, or use a completely different device that has not logged into the setup page.
+<br>
+In this incognito window goto foundryvtt.your_domain_name.com
+
+![07-newicogeto.png](./img/07-newicogeto.png)
+
+<br>
+
+Notice how it sent us to https://foundryvtt.your_domain_name.com/join and <b>not</b> the https://foundryvtt.your_domain_name.com/setup page.
+<br>
+Also notice how they can not select Gamemaster as you are currently logged into it on another incognito screen/device
+<br>
+###### Close this incognito window or other device now
+
+![08-playerselect.png](./img/08-playerselect.png)
+
+<br>
+
+Back on the first window we started all this on lets click, Return to Setup.
+
+![09-returntosetup.png](./img/09-returntosetup.png)
+
+<br>
+
+The Game Server is no longer running now that we are back in /setup
+<b>
+Also if a user or in a incognito tab you try to goto https://foundryvtt.your_domain_name.com you will be sent to https://foundryvtt.your_domain_name.com/setup and prompted for the password you setup for user auth.
+<b>
+What you should take away from all of this:
+<br>
+A Launched Game/World = users sent to https://foundryvtt.your_domain_name.com/anything_else_here and the basic auth password prompt is not presented.
+<br>
+When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https://foundryvtt.your_domain_name.com/setup and are asked for a password before they can view the game.
+<br>
+<br>
+<br>
+Now go enjoy FoundryVTT!
+<br>
 <b>END OF TUTORIAL</b>
