@@ -830,6 +830,7 @@ The Game Server is no longer running now that we are back in /setup
 <br>
 Also if a user or in a incognito tab you try to goto https://foundryvtt.your_domain_name.com you will be sent to https://foundryvtt.your_domain_name.com/setup and prompted for the password you setup for user auth.
 <br>
+<br>
 What you should take away from all of this:
 <br>
 <br>
