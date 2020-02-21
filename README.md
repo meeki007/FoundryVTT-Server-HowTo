@@ -22,8 +22,9 @@ LogosWorks - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [h
     * [Install_Nginx](#Install_Nginx)
     * [DNS](#DNS)
     * [Reverse_proxy](#Reverse_proxy)
-    * [HTTPS_SSL_certbot](#HTTPS_SSL_certbot)
+    * [HTTPS_SSL_certbot](#HTTPS_SSL_certbot
     * [Securing_Setup_Page](#Securing_Setup_Page)
+        * [Example Config](#IMPT_NOTE)
 * [Backup_Recovery](#Backup_Recovery)
 * [First_use_and_how_users_login](#First_use_and_how_users_login)
 
@@ -670,7 +671,7 @@ location /setup {
 ```
 <br>
 
-#### NOTE:
+#### IMPT_NOTE:
 #### It should look like this when your done
 ```
 #proxy for foundryvtt @ port :30000
