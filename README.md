@@ -26,8 +26,8 @@ LogosWorks - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [h
     * [Securing_Setup_Page](#Securing_Setup_Page)
         * [Example Config](#IMPT_NOTE)
 * [Backup_Recovery](#Backup_Recovery)
-        * [Nuclear_option](#Nuclear_option)
-        * [TOS_Terms_of_service_loop_bug](#Nuclear_option)
+    * [Nuclear_option](#Nuclear_option)
+    * [TOS_Terms_of_service_loop_bug](#Nuclear_option)
 * [First_use_and_how_users_login](#First_use_and_how_users_login)
 
 
