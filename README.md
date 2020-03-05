@@ -26,6 +26,8 @@ LogosWorks - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [h
     * [Securing_Setup_Page](#Securing_Setup_Page)
         * [Example Config](#IMPT_NOTE)
 * [Backup_Recovery](#Backup_Recovery)
+        * [Nuclear_option](#Nuclear_option)
+        * [TOS_Terms_of_service_loop_bug](#Nuclear_option)
 * [First_use_and_how_users_login](#First_use_and_how_users_login)
 
 
@@ -851,6 +853,97 @@ $ pm2 start main
 ```
 
 If you now login to the server https://foundryvtt.your_domain_name.com you will find it reset to stock or backup if you moved the files.
+
+
+### Nuclear_option
+So you really messed up and foundryvtt is not working. Ya forgot to agree to the TOS Terms of Service or ya poked around with the insides and you need a fresh start.
+<br>
+<br>
+Stop nginx
+In terminal:
+```
+$ sudo systemctl stop nginx
+```
+<br>
+<br>
+Stop foundryvtt
+In terminal:
+```
+$ pm2 stop main
+```
+<br>
+<br>
+If you have any thing you care about in the foundry folder, before you do this back it up
+<br>
+Delete foundryvtt folder
+In terminal:
+```
+$ sudo rm -rfv /$HOME/foundryvtt_server/
+```
+<br>
+<br>
+Create a new foundryvtt folder
+In terminal:
+```
+$ mkdir -p $HOME/foundryvtt_server/{foundryvtt,foundrydata}
+```
+<br>
+<br>
+enter the dir
+In terminal:
+```
+$ cd $HOME/foundryvtt_server
+```
+<br>
+<br>
+Goto the FoundryVTT patreon page https://www.patreon.com/foundryvtt/posts
+<br>
+Download and extract the latest Foundry Virtual Tabletop Linux version from Patreon
+In terminal:
+```
+$ wget https://patreon-link-here.zip -O foundryvtt.zip
+```
+<br>
+<br>
+Unzip the file to the /home/YourChosenNameHere/foundryvtt_server/foundryvtt/ directory
+<br>
+You may have to install unzip if its not installed on your server with: $ sudo apt-get install -y unzip
+In terminal:
+```
+$ unzip foundryvtt.zip -d /$HOME/foundryvtt_server/foundryvtt/
+```
+<br>
+<br>
+Create a directory /home/YourChosenNameHere/foundryvtt_server/htpasswd/ to store the password file
+In terminal:
+```
+$ mkdir -p $HOME/foundryvtt_server/htpasswd
+```
+<br>
+<br>
+Create the password, the last word admin being the user name created for the login
+In terminal:
+```
+$ sudo htpasswd -c $HOME/foundryvtt_server/htpasswd/.htpasswd admin
+```
+<br>
+<br>
+Start foundryvtt
+In terminal:
+```
+$ pm2 start main
+```
+<br>
+<br>
+Start nginx
+In terminal:
+```
+$ sudo systemctl start nginx
+```
+<br>
+<br>
+You should now be able to login to a fresh start of foundryvtt server.
+<br>
 
 
 ## First_use_and_how_users_login
