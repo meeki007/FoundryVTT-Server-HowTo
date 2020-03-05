@@ -3,6 +3,7 @@
 
 ### Contributors
 <b>LogosWorks</b> - Upaded howto - Fix for 1MB Upload limit in the Nginx Config file [https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1](https://github.com/meeki007/FoundryVTT-Server-HowTo/issues/1)
+<br>
 <b>Shadoghast</b> - TOS Loop issue - Big help by walking through it step by step with me working out the details to create a Nuclear_option to wipe the server of foundryvtt and then install a fresh version. 
 
 
