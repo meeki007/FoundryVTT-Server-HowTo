@@ -872,7 +872,6 @@ In terminal:
 ```
 $ pm2 stop main
 ```
-
 <br>
 
 If you have any thing you care about in the foundry folder, before you do this back it up
@@ -900,54 +899,61 @@ In terminal:
 $ cd $HOME/foundryvtt_server
 ```
 <br>
-<br>
+
 Goto the FoundryVTT patreon page https://www.patreon.com/foundryvtt/posts
 <br>
 Download and extract the latest Foundry Virtual Tabletop Linux version from Patreon
+
 In terminal:
 ```
 $ wget https://patreon-link-here.zip -O foundryvtt.zip
 ```
 <br>
-<br>
+
 Unzip the file to the /home/YourChosenNameHere/foundryvtt_server/foundryvtt/ directory
 <br>
 You may have to install unzip if its not installed on your server with: $ sudo apt-get install -y unzip
+
 In terminal:
 ```
 $ unzip foundryvtt.zip -d /$HOME/foundryvtt_server/foundryvtt/
 ```
 <br>
-<br>
+
 Create a directory /home/YourChosenNameHere/foundryvtt_server/htpasswd/ to store the password file
+
 In terminal:
 ```
 $ mkdir -p $HOME/foundryvtt_server/htpasswd
 ```
 <br>
-<br>
+
 Create the password, the last word admin being the user name created for the login
+
 In terminal:
 ```
 $ sudo htpasswd -c $HOME/foundryvtt_server/htpasswd/.htpasswd admin
 ```
 <br>
-<br>
+
 Start foundryvtt
+
 In terminal:
 ```
 $ pm2 start main
 ```
 <br>
-<br>
+
 Start nginx
+
 In terminal:
 ```
 $ sudo systemctl start nginx
 ```
 <br>
-<br>
+
 You should now be able to login to a fresh start of foundryvtt server.
+
 <br>
 
 
