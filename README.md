@@ -857,39 +857,44 @@ If you now login to the server https://foundryvtt.your_domain_name.com you will 
 
 ### Nuclear_option
 So you really messed up and foundryvtt is not working. Ya forgot to agree to the TOS Terms of Service or ya poked around with the insides and you need a fresh start.
-<br>
-<br>
+
 Stop nginx
+
 In terminal:
 ```
 $ sudo systemctl stop nginx
 ```
 <br>
-<br>
+
 Stop foundryvtt
+
 In terminal:
 ```
 $ pm2 stop main
 ```
+
 <br>
-<br>
+
 If you have any thing you care about in the foundry folder, before you do this back it up
-<br>
+
 Delete foundryvtt folder
+
 In terminal:
 ```
 $ sudo rm -rfv /$HOME/foundryvtt_server/
 ```
 <br>
-<br>
+
 Create a new foundryvtt folder
+
 In terminal:
 ```
 $ mkdir -p $HOME/foundryvtt_server/{foundryvtt,foundrydata}
 ```
 <br>
-<br>
+
 enter the dir
+
 In terminal:
 ```
 $ cd $HOME/foundryvtt_server
