@@ -34,6 +34,7 @@ Here I will outline fixes needed to move foward. If this is your first install o
     * [Nuclear_option](#Nuclear_option)
     * [TOS_Terms_of_service_loop_bug](#Nuclear_option)
 * [First_use_and_how_users_login](#First_use_and_how_users_login)
+* [Reading_logs](#Reading_logs)
 * [UPGRADE-NOTES](#UPGRADE-NOTES)
 
 
@@ -1075,6 +1076,20 @@ When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https:
 Now go enjoy FoundryVTT!
 <br>
 <b>END OF TUTORIAL</b>
+
+<br>
+
+<br>
+
+## Reading_logs
+If you need to see the output of the logs from foundryvtt 
+In terminal:
+```
+$ pm2 logs
+```
+use CTRL+C (hold contol key down and press C) to exit the logs
+
+<br>
 
 <br>
 
