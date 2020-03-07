@@ -1117,7 +1117,7 @@ $ node -v
 ```
 <br>
 
-While where here might as well update npm
+While we are here might as well update npm
 In terminal:
 ```
 $ sudo npm install -g npm
