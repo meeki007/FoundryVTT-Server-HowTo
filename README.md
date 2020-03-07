@@ -1086,7 +1086,7 @@ Upgrade nodeJS from ver-10 to ver-12
 Stop foundryvtt
 In terminal:
 ```
-$ pm2 start main
+$ pm2 stop main
 ```
 <br>
 
@@ -1097,10 +1097,10 @@ $ sudo systemctl stop nginx
 ```
 <br>
 
-install newest stable node version
+add nodeJS-12 to the repository
 In terminal:
 ```
-$ sudo npm install -g n
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 <br>
 
