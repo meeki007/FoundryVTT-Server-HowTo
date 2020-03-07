@@ -215,7 +215,7 @@ Install nodejs
 In terminal:
 
 ```
-$ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 ```
 $ sudo apt install -y nodejs
@@ -1108,6 +1108,13 @@ check that nodeJS-12 is installed
 In terminal:
 ```
 $ node -v
+```
+<br>
+
+While where here might as well update npm
+In terminal:
+```
+$ sudo npm install -g npm
 ```
 
 
