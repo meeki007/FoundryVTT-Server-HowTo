@@ -1078,10 +1078,12 @@ Now go enjoy FoundryVTT!
 
 ## UPGRADE-NOTES
 
-#### Foundryvtt 0.47 to 0.50
-Upgrade nodeJS from ver-10 to ver-12
 
-# under construction do not follow yet!!!!!!!!!!!!
+
+#### Foundryvtt 0.47 to 0.50
+#### DO THIS BEFORE UPGRADING TO 0.50
+
+Upgrade nodeJS from ver-10 to ver-12
 
 Stop foundryvtt
 In terminal:
@@ -1116,7 +1118,27 @@ In terminal:
 ```
 $ sudo npm install -g npm
 ```
+<br>
 
+Start foundryvtt
+
+In terminal:
+```
+$ pm2 start main
+```
+<br>
+
+Start nginx
+
+In terminal:
+```
+$ sudo systemctl start nginx
+```
+<br>
+
+You should now be able to login to foundryvtt server and upgrade to 0.50
+<br>
+remember to apply the pinned fixes listed in the 0.50 discord channel and also install the D&D5e version which is designed for 0.5.0
 
 
 
