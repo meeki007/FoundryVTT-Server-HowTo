@@ -6,6 +6,7 @@
 <br>
 <b>Shadoghast</b> - TOS Loop issue - Big help by walking through it step by step with me working out the details to create a Nuclear_option to wipe the server of foundryvtt and then install a fresh version. 
 
+### If you already used this guide to install a server and you are having issues when upgrading from one foundry version to another ..... Please see section UPGRADE-NOTES . Here I will couver fixes needed to move foward. If this is your first install of the server howto just follow the directions as normal, step by step.
 
 ## Table of Contents
 * [Introduction](#Introduction)
