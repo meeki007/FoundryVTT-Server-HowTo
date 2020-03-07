@@ -1076,6 +1076,10 @@ Now go enjoy FoundryVTT!
 <br>
 <b>END OF TUTORIAL</b>
 
+<br>
+
+<br>
+
 ## UPGRADE-NOTES
 
 
