@@ -1104,9 +1104,14 @@ $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 <br>
 
-get new version of nodeJS installed
+check that nodeJS-12 is installed
 In terminal:
 ```
-$ ls /usr/local/n/versions/node/
+$ node -v
 ```
-copy this version number into the next 
+
+
+
+
+
+
