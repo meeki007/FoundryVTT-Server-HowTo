@@ -1140,6 +1140,12 @@ You should now be able to login to foundryvtt server and upgrade to 0.50
 <br>
 remember to apply the pinned fixes listed in the 0.50 discord channel and also install the D&D5e version which is designed for 0.5.0
 
+Remember to restart foundryvtt after applying pinned fixes
+In terminal:
+```
+$ pm2 restart main
+```
+<br>
 
 
 
