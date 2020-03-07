@@ -34,6 +34,7 @@ Here I will outline fixes needed to move foward. If this is your first install o
     * [Nuclear_option](#Nuclear_option)
     * [TOS_Terms_of_service_loop_bug](#Nuclear_option)
 * [First_use_and_how_users_login](#First_use_and_how_users_login)
+* [UPGRADE-NOTES](#UPGRADE-NOTES)
 
 
 
@@ -1074,3 +1075,38 @@ When in setup mode (the Game/World is <b>NOT</b> running) = users sent to https:
 Now go enjoy FoundryVTT!
 <br>
 <b>END OF TUTORIAL</b>
+
+## UPGRADE-NOTES
+
+#### Foundryvtt 0.47 to 0.50
+Upgrade nodeJS from ver-10 to ver-12
+
+# under construction do not follow yet!!!!!!!!!!!!
+
+Stop foundryvtt
+In terminal:
+```
+$ pm2 start main
+```
+<br>
+
+Stop nginx
+In terminal:
+```
+$ sudo systemctl stop nginx
+```
+<br>
+
+install newest stable node version
+In terminal:
+```
+$ sudo npm install -g n
+```
+<br>
+
+get new version of nodeJS installed
+In terminal:
+```
+$ ls /usr/local/n/versions/node/
+```
+copy this version number into the next 
