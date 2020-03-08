@@ -1156,7 +1156,7 @@ $ sudo systemctl start nginx
 ```
 <br>
 
-You should now be able to login to foundryvtt server and upgrade to 0.5 0or 0.51
+You should now be able to login to foundryvtt server and upgrade to 0.50 or 0.51
 <br>
 0.50 - remember to apply the pinned fixes listed in the 0.50 discord channel 
 
