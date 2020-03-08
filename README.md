@@ -7,7 +7,8 @@
 <b>Shadoghast</b> - TOS Loop issue - Big help by walking through it step by step with me working out the details to create a Nuclear_option to wipe the server of foundryvtt and then install a fresh version. 
 
 ### If you already used this guide to install a server and you are having issues when upgrading from one foundry version to another ..... Please see section UPGRADE-NOTES . 
-Here I will outline fixes needed to move foward. If this is your first install of the server howto just follow the directions as normal, step by step.
+
+If this is your first install of the server howto just follow the directions as normal, step by step.
 
 ## Table of Contents
 * [Introduction](#Introduction)
@@ -1099,8 +1100,8 @@ use CTRL+C (hold contol key down and press C) to exit the logs
 
 
 
-#### Foundryvtt 0.47 to 0.50
-#### DO THIS BEFORE UPGRADING TO 0.50
+#### Foundryvtt 0.47 to 0.50 & 0.51
+#### DO THIS BEFORE UPGRADING to 0.50 or 0.51
 
 Upgrade nodeJS from ver-10 to ver-12
 
@@ -1155,11 +1156,13 @@ $ sudo systemctl start nginx
 ```
 <br>
 
-You should now be able to login to foundryvtt server and upgrade to 0.50
+You should now be able to login to foundryvtt server and upgrade to 0.5 0or 0.51
 <br>
-remember to apply the pinned fixes listed in the 0.50 discord channel and also install the D&D5e version which is designed for 0.5.0
+0.50 - remember to apply the pinned fixes listed in the 0.50 discord channel 
 
-Remember to restart foundryvtt after applying pinned fixes
+0.50 and 0.51 also remember to install the D&D5e version which is designed for 0.5.0 and 0.51
+
+Remember to restart foundryvtt after applying update
 In terminal:
 ```
 $ pm2 restart main
