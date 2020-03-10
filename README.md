@@ -1126,6 +1126,13 @@ $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 <br>
 
+Install nodeJS-12
+In terminal:
+```
+$ sudo apt install -y nodejs
+```
+<br>
+
 check that nodeJS-12 is installed
 In terminal:
 ```
